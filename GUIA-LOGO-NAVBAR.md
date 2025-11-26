@@ -17,28 +17,28 @@ A logo está configurada com:
 Ideal para navbar minimalista:
 
 ```html
-<img src="assets/images/ApipemaPet.png" alt="ApipemaPet" class="navbar-logo" style="height: 30px;">
+<img src="ApipemaPet.png" alt="ApipemaPet" class="navbar-logo" style="height: 30px;">
 ```
 
 ### 2️⃣ **Logo Média (40-50px)** ⭐ ATUAL
 Tamanho padrão e equilibrado:
 
 ```html
-<img src="assets/images/ApipemaPet.png" alt="ApipemaPet" class="navbar-logo">
+<img src="ApipemaPet.png" alt="ApipemaPet" class="navbar-logo">
 ```
 
 ### 3️⃣ **Logo Grande (60-70px)**
 Mais destaque para a marca:
 
 ```html
-<img src="assets/images/ApipemaPet.png" alt="ApipemaPet" class="navbar-logo" style="height: 65px;">
+<img src="ApipemaPet.png" alt="ApipemaPet" class="navbar-logo" style="height: 65px;">
 ```
 
 ### 4️⃣ **Logo Extra Grande (80-100px)**
 Máximo destaque:
 
 ```html
-<img src="assets/images/ApipemaPet.png" alt="ApipemaPet" class="navbar-logo" style="height: 90px;">
+<img src="ApipemaPet.png" alt="ApipemaPet" class="navbar-logo" style="height: 90px;">
 ```
 
 ---
@@ -49,16 +49,16 @@ Máximo destaque:
 
 ```html
 <!-- Apenas altura (mantém proporção) -->
-<img src="assets/images/ApipemaPet.png" alt="ApipemaPet" height="50">
+<img src="ApipemaPet.png" alt="ApipemaPet" height="50">
 
 <!-- Largura e altura fixas -->
-<img src="assets/images/ApipemaPet.png" alt="ApipemaPet" width="150" height="50">
+<img src="ApipemaPet.png" alt="ApipemaPet" width="150" height="50">
 ```
 
 ### **Método 2: Style Inline**
 
 ```html
-<img src="assets/images/ApipemaPet.png" alt="ApipemaPet" 
+<img src="ApipemaPet.png" alt="ApipemaPet" 
      style="height: 50px; width: auto;">
 ```
 
@@ -66,7 +66,7 @@ Máximo destaque:
 
 HTML:
 ```html
-<img src="assets/images/ApipemaPet.png" alt="ApipemaPet" class="navbar-logo">
+<img src="ApipemaPet.png" alt="ApipemaPet" class="navbar-logo">
 ```
 
 CSS (em `css/style.css`):
@@ -140,21 +140,21 @@ window.addEventListener('scroll', function() {
 ### Logo Circular/Quadrada
 
 ```html
-<img src="assets/images/ApipemaPet.png" alt="ApipemaPet" 
+<img src="ApipemaPet.png" alt="ApipemaPet" 
      style="height: 50px; width: 50px; border-radius: 50%; object-fit: cover;">
 ```
 
 ### Logo com Borda
 
 ```html
-<img src="assets/images/ApipemaPet.png" alt="ApipemaPet" 
+<img src="ApipemaPet.png" alt="ApipemaPet" 
      style="height: 50px; border: 2px solid white; border-radius: 8px; padding: 5px;">
 ```
 
 ### Logo com Sombra
 
 ```html
-<img src="assets/images/ApipemaPet.png" alt="ApipemaPet" 
+<img src="ApipemaPet.png" alt="ApipemaPet" 
      style="height: 50px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));">
 ```
 
@@ -197,7 +197,7 @@ CSS:
 2. **SVG** (Ideal para logos vetoriais)
    - Escalável sem perder qualidade
    - Arquivo leve
-   - Exemplo: `<img src="assets/images/logo.svg">`
+   - Exemplo: `<img src="logo.svg">`
 
 3. **WebP** (Moderno)
    - Ótima compressão
@@ -219,12 +219,12 @@ CSS:
 
 Localize a linha 23 em `index.html`:
 ```html
-<img src="assets/images/ApipemaPet.png" alt="ApipemaPet" class="navbar-logo me-2">
+<img src="ApipemaPet.png" alt="ApipemaPet" class="navbar-logo me-2">
 ```
 
 Adicione style para ajustar:
 ```html
-<img src="assets/images/ApipemaPet.png" alt="ApipemaPet" class="navbar-logo me-2" 
+<img src="ApipemaPet.png" alt="ApipemaPet" class="navbar-logo me-2" 
      style="height: 60px;">
 ```
 
@@ -272,7 +272,7 @@ Edite `css/style.css`, procure `.navbar-logo` e mude:
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
     <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="#home">
-            <img src="assets/images/ApipemaPet.png" 
+            <img src="ApipemaPet.png" 
                  alt="ApipemaPet Logo" 
                  class="navbar-logo me-2">
             <span class="brand-text">ApipemaPet</span>

@@ -18,7 +18,7 @@ ApipemaPet/
 
 ## 🖼️ Imagens Necessárias
 
-Para que a landing page funcione perfeitamente, você precisa adicionar as seguintes imagens na pasta `assets/images/`:
+Para que a landing page funcione perfeitamente, você precisa adicionar as seguintes imagens na pasta ``:
 
 ### 1. Imagem de Fundo do Hero
 - **Nome:** `hero-background.jpg`
@@ -105,7 +105,7 @@ Antes de publicar, você precisa atualizar os seguintes dados no arquivo `index.
 
 ### Desenvolvimento Local (sem servidor):
 
-1. **Adicione suas imagens** na pasta `assets/images/` conforme a lista acima
+1. **Adicione suas imagens** na pasta `` conforme a lista acima
 2. **Personalize as informações** de contato e endereço no `index.html`
 3. **Atualize o iframe** do Google Maps com sua localização
 4. **Abra o arquivo** `index.html` no navegador para visualizar
