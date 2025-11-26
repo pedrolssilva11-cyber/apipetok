@@ -1,0 +1,367 @@
+/* ==================== GENERAL STYLES ==================== */
+:root {
+    --primary-color: #32b436;
+    --secondary-color: #6c757d;
+    --dark-color: #212529;
+    --light-color: #f8f9fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+/* ==================== NAVBAR ==================== */
+.navbar {
+    padding: 0.5rem 0; /* reduzido de 1rem para diminuir a altura */
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.15rem; /* reduzido de 1.5rem */
+    font-weight: bold;
+}
+
+/* Logo do Navbar */
+.navbar-logo {
+    height: 36px; /* reduzido de 40px */
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+/* Logo menor quando rolar a página */
+.navbar.scrolled .navbar-logo {
+    height: 32px; /* reduzido de 40px */
+}
+
+/* Logo responsiva para mobile */
+@media (max-width: 768px) {
+    .navbar-logo {
+        height: 34px; /* reduzido de 40px */
+    }
+    
+    .navbar.scrolled .navbar-logo {
+        height: 30px; /* reduzido de 35px */
+    }
+}
+
+.navbar-nav .nav-link {
+    margin: 0 0.5rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.navbar.bg-primary,
+.navbar.navbar-dark.bg-primary {
+    background-color: #32dc37 !important;
+}
+
+/* Ajuste opcional para o ícone do toggler (melhor contraste) */
+.navbar .navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+/* ==================== HERO SECTION ==================== */
+.hero-section {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffffff 0%, #32dc37 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../assets/images/hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==================== ABOUT SECTION ==================== */
+.about-image-wrapper {
+    position: relative;
+}
+
+.about-image-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.about-badge {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.about-badge i {
+    color: var(--primary-color);
+}
+
+/* ==================== GALLERY SECTION ==================== */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: white;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* ==================== LOCATION SECTION ==================== */
+.map-container {
+    overflow: hidden;
+}
+
+.map-container iframe {
+    border-radius: 10px;
+}
+
+/* ==================== CONTACT SECTION ==================== */
+.contact-info-box {
+    background: var(--light-color);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#contactForm .form-control,
+#contactForm .form-select {
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+    transition: border-color 0.3s ease;
+}
+
+#contactForm .form-control:focus,
+#contactForm .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+/* ==================== FOOTER ==================== */
+footer a:hover {
+    color: var(--primary-color) !important;
+    transition: color 0.3s ease;
+}
+
+.social-links a {
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+}
+
+/* ==================== BACK TO TOP BUTTON ==================== */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    display: none;
+    z-index: 1000;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    box-shadow: 0 4px 15px rgba(255, 115, 0, 0.175);
+    transition: all 0.3s ease;
+}
+
+#backToTop:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(255,115, 0, 0.175);
+}
+
+#backToTop i {
+    font-size: 1.5rem;
+}
+
+/* ==================== UTILITY CLASSES ==================== */
+.shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(255, 115, 0, 0.175) !important;
+}
+
+section {
+    scroll-margin-top: 60px; /* ajustado para refletir a nova altura da navbar (antes 70px) */
+}
+
+/* ==================== RESPONSIVE STYLES ==================== */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .about-badge {
+        bottom: 10px;
+        right: 10px;
+        padding: 1rem;
+    }
+    
+    .about-badge i {
+        font-size: 2rem !important;
+    }
+    
+    .gallery-item img {
+        height: 250px;
+    }
+    
+    #backToTop {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .display-5 {
+        font-size: 2rem;
+    }
+    
+    .gallery-item img {
+        height: 200px;
+    }
+}
+
+/* ==================== ANIMATIONS ==================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease;
+}
+
+/* ==================== PRINT STYLES ==================== */
+@media print {
+    .navbar,
+    #backToTop,
+    footer {
+        display: none;
+    }
+}
+
